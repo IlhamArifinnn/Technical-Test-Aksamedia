@@ -3,6 +3,7 @@ import AddUserModal from "./AddUserModal";
 import EditUserModal from "./EditUserModal";
 import { useSearchParams } from "react-router";
 import Pagination from "./Pagination";
+import Swal from "sweetalert2";
 
 function Table() {
   const [users, setUsers] = useState([]);
@@ -149,8 +150,24 @@ function Table() {
                     <button
                       className="text-red-600 hover:underline"
                       onClick={() => {
-                        confirm("apakah kamu ingin menghapus data ini?") &&
-                          handleDelete(user.id);
+                        // confirm("apakah kamu ingin menghapus data ini?")
+                        Swal.fire({
+                          title: "Apakah kamu yakin menghapus data ini?",
+                          icon: "warning",
+                          showCancelButton: true,
+                          confirmButtonColor: "#3085d6",
+                          cancelButtonColor: "#d33",
+                          confirmButtonText: "Hapus!",
+                          cancelButtonText: "Batal!",
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            Swal.fire({
+                              title: "Hapus!",
+                              text: "Data berhasil dihapus.",
+                              icon: "success",
+                            });
+                          }
+                        }) && handleDelete(user.id);
                       }}
                     >
                       Hapus

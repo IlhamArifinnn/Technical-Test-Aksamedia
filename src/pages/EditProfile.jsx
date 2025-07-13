@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function EditProfile() {
   const { user, updateFullname } = useAuth();
@@ -11,7 +12,7 @@ function EditProfile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     updateFullname(fullname);
-    alert("Nama berhasil diperbarui!");
+    Swal.fire("Nama berhasil diperbarui!");
     navigate("/dashboard"); // redirect
   };
 
