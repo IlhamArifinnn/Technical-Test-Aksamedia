@@ -9,7 +9,7 @@ function Pagination({ totalPages, currentPage, onPageChange }) {
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`px-3 py-1 rounded-md text-sm ${
+            className={`px-3 py-1 rounded-md text-sm cursor-pointer ${
               page === currentPage
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
