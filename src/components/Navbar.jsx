@@ -23,7 +23,7 @@ function Navbar() {
         <select
           value={theme}
           onChange={(e) => toggleTheme(e.target.value)}
-          className="bg-gray-100 p-2 text-sm rounded-md dark:bg-gray-800 dark:text-white"
+          className="bg-gray-100 p-2 text-sm rounded-md dark:bg-gray-800 dark:text-white cursor-pointer"
         >
           <option value="system">🌐 System</option>
           <option value="light">☀️ Light</option>
