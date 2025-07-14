@@ -140,15 +140,15 @@ function Table() {
                   </td>
                   <td className="px-4 py-2">{user.name}</td>
                   <td className="px-4 py-2">{user.email}</td>
-                  <td className="px-4 py-2 space-x-3 cursor-pointer">
+                  <td className="px-4 py-2 space-x-3">
                     <button
-                      className="text-blue-600 hover:underline"
+                      className="text-blue-600 hover:underline cursor-pointer"
                       onClick={() => setEditingUser(user)}
                     >
                       Edit
                     </button>
                     <button
-                      className="text-red-600 hover:underline"
+                      className="text-red-600 hover:underline cursor-pointer"
                       onClick={() => {
                         // confirm("apakah kamu ingin menghapus data ini?")
                         Swal.fire({
