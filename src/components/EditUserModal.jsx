@@ -53,13 +53,13 @@ function EditUserModal({ user, onClose, onUpdate }) {
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-md"
+              className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-md cursor-pointer"
             >
               Batal
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md cursor-pointer"
             >
               Simpan Perubahan
             </button>
