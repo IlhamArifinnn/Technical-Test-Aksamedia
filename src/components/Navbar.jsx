@@ -3,7 +3,7 @@ import Dropdown from "./Dropdown";
 import useTheme from "../hooks/useTheme";
 import { Link, useNavigate } from "react-router";
 
-function Navbar() {
+const Navbar = () => {
   const { user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate(); //
@@ -34,6 +34,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

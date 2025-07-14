@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import EditProfile from "./pages/EditProfile";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-function App() {
+const App = () => {
   return (
     <>
       <Routes>
@@ -29,6 +29,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;

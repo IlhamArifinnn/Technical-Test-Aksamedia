@@ -1,4 +1,4 @@
-function Pagination({ totalPages, currentPage, onPageChange }) {
+const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   if (totalPages <= 1) return null;
 
   return (
@@ -21,6 +21,6 @@ function Pagination({ totalPages, currentPage, onPageChange }) {
       })}
     </div>
   );
-}
+};
 
 export default Pagination;

@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-function EditProfile() {
+const EditProfile = () => {
   const { user, updateFullname } = useAuth();
   const [fullname, setFullname] = useState(user?.fullname || "");
   const navigate = useNavigate();
@@ -46,6 +46,6 @@ function EditProfile() {
       </div>
     </div>
   );
-}
+};
 
 export default EditProfile;

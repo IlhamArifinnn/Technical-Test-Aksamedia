@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EditUserModal({ user, onClose, onUpdate }) {
+const EditUserModal = ({ user, onClose, onUpdate }) => {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
 
@@ -68,6 +68,6 @@ function EditUserModal({ user, onClose, onUpdate }) {
       </div>
     </div>
   );
-}
+};
 
 export default EditUserModal;

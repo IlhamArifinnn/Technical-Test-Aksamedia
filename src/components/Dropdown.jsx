@@ -1,7 +1,7 @@
 // src/components/Dropdown.jsx
 import { useState, useRef, useEffect } from "react";
 
-function Dropdown({ user, onLogout, onEdit }) {
+const Dropdown = ({ user, onLogout, onEdit }) => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -59,6 +59,6 @@ function Dropdown({ user, onLogout, onEdit }) {
       )}
     </div>
   );
-}
+};
 
 export default Dropdown;

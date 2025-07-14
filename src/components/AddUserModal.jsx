@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
 
-function AddUserModal({ onClose, onAdd }) {
+const AddUserModal = ({ onClose, onAdd }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -74,6 +74,6 @@ function AddUserModal({ onClose, onAdd }) {
       </div>
     </div>
   );
-}
+};
 
 export default AddUserModal;

@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router";
 import Pagination from "./Pagination";
 import Swal from "sweetalert2";
 
-function Table() {
+const Table = () => {
   const [users, setUsers] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const keyword = searchParams.get("search") || "";
@@ -209,6 +209,6 @@ function Table() {
       </div>
     </>
   );
-}
+};
 
 export default Table;
